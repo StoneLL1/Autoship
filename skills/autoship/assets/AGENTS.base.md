@@ -8,8 +8,8 @@ Let the agent choose task count and session grouping according to difficulty and
 
 Let layout, hierarchy, spacing and clear primary actions explain the interface. Reduce redundant text while retaining necessary labels, accessible names and consequences of irreversible actions.
 
-Complete each task with one independent subagent review, using the strongest configured available model where supported. The implementer fixes valid findings and verifies; do not repeat the review after repairs or session changes.
+When using Autoship, follow its implementation and handoff instructions for independent review, repair budgets and session ownership. Preserve their history across session changes; unavailable checks or review remain visibly pending.
 
 Record meaningful progress briefly with the project's timezone. Synchronize changed decisions and actual results; distinguish planned, implemented, verified and pending work.
 
-When Autoship is running, the runner owns checkpoints, commits and retry counts. Keep work inside the assigned workspace and preserve existing user changes.
+Keep work inside the agreed workspace and preserve existing user changes. Point to the active handoff outside the task worktree; record its location so a successor can continue. Push or publish only when explicitly requested.

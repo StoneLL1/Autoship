@@ -7,6 +7,6 @@ Cover these responsibilities, combining them in the same session where useful. C
 3. [Project conventions](init-project.md)
 4. [Implementation plan](plan-implementation.md)
 5. [Executable tasks](split-tasks.md)
-6. Prepare the package for [one planning review](review-plan.md). When using the runner, it dispatches that review after your result; do not dispatch it yourself.
+6. Dispatch [one planning review](review-plan.md) of the complete package, then resolve valid findings using [plan repair](plan-repair.md).
 
 Use the project's filenames where already established. A document is ready when it explains its decisions and the next stage can use it, not merely when the file exists.

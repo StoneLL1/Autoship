@@ -1,5 +1,5 @@
 # Revisit pending verification
 
-Read the original task and its pending conditions. Inspect the current accepted project, perform the checks now possible, and return only the conditions that still cannot be verified in deferred.
+Read the original task, its delivered version and pending conditions. Inspect the current accepted project and perform the checks now possible. Record the actual version, results and evidence; retain only conditions still unverified, with their next checks.
 
-Report actual regressions as issues with evidence. Keep code unchanged: the runner creates a repair task from the current accepted revision when necessary. Successful verification does not require another review. Update documentation only when the runner requests synchronization.
+Report regressions as issues with evidence. Use [recovery](recover.md) to create linked repair work from the current result instead of rolling back an old delivered task. Successful verification alone needs no new review. Synchronize affected documents and the handoff, then continue remaining work.
