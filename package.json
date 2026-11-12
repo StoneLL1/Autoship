@@ -1,0 +1,19 @@
+{
+  "name": "autoship",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Lightweight, skill-driven development handoffs for existing coding agents.",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/StoneLL1/Autoship.git" },
+  "homepage": "https://github.com/StoneLL1/Autoship#readme",
+  "bugs": { "url": "https://github.com/StoneLL1/Autoship/issues" },
+  "files": ["scripts/", "skills/", "docs/runtime.md", "docs/how-it-works.html", "README.md", "CHANGELOG.md", "progress.md", "LICENSE"],
+  "engines": { "node": ">=24" },
+  "bin": { "autoship": "scripts/autoship.mjs" },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node scripts/autoship.mjs demo",
+    "doctor": "node scripts/autoship.mjs doctor",
+    "smoke": "node scripts/smoke.mjs"
+  }
+}
