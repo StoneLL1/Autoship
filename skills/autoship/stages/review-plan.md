@@ -8,6 +8,6 @@ If independent review is unavailable, record it as pending and continue preparin
 
 ## Independent reviewer
 
-Review the complete planning package once. Compare requirements, design, flows, technical assumptions, task coverage and acceptance checks. Inspect relevant project evidence rather than relying on the planner's summary.
+Review the complete planning package once. Compare requirements, design, flows, technical assumptions, task coverage and [acceptance checks](../references/quality.md). Inspect relevant project evidence rather than relying on the planner's summary. Check that each promised outcome has a task and observable check, dependencies and shared interfaces agree, and a fresh implementer has usable reading pointers. Prefer the smallest sufficient package; the absence of an unnecessary document is not a finding.
 
-Return actionable gaps with their locations and consequences. Stay read-only and do not spawn another reviewer. The coordinating agent resolves valid findings; there are no separate reviews for each document.
+Return gaps with stable IDs, locations, consequences and evidence. Separate blocking product ambiguity from implementation choices the agent can make. State coverage and limits even when there are no findings. Stay read-only and do not spawn another reviewer. The coordinating agent resolves valid findings; there are no separate reviews for each document.

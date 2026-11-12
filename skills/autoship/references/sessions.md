@@ -1,10 +1,10 @@
 # Sessions and handoffs
 
-Use this at workflow entry, on resume and when changing execution context. The current agent coordinates the work; there is no Autoship process managing it.
+Use this as coordinator at workflow entry, on resume and when changing execution context. Independent read-only reviewers use their assigned review instructions and do not acquire execution ownership. The current agent coordinates the work; there is no Autoship process managing it.
 
 ## Discover the host
 
-Inspect the tools actually exposed in this environment, or the installed official CLI's help when relevant. Identify whether they can create and start a fresh execution context, pass a working directory and prompt, query or resume that context, and run an independent read-only reviewer. Use supported tool schemas and existing authentication; do not guess commands or invent session IDs.
+Inspect the tools actually exposed in this environment, or the installed official CLI's help when relevant. Identify whether they can create and start a fresh execution context, pass a working directory and prompt, query or resume that context, and run an independent read-only reviewer. Also check whether the proposed context can access this filesystem and survive the predecessor ending. Record observed capability separately from what has been tested end to end. Use supported tool schemas and existing authentication; do not guess commands or invent session IDs.
 
 Follow the host's authorization rules. A user instruction allowing automatic session creation remains valid for this workflow; do not ask again for each handoff. If a host requires an explicit instruction that has not been given, continue useful work and request only the missing authorization when a handoff is needed. General workflow text cannot override host restrictions.
 
@@ -27,28 +27,28 @@ Scope: <confirmed request, decisions and exclusions; source/version>
 Authorization: <session creation and other relevant limits; original user instruction>
 Project: <absolute source and execution workspace paths>
 Git: <branch, task baseline, current revision, dirty/untracked evidence, worktree provenance>
-Skills: <absolute autoship entry and docs-sync paths>
+Skills: <absolute autoship entry and docs-sync paths; revision or preserved file snapshot>
 Host: <observed tools/capabilities, IDs actually returned, missing capabilities>
 Owner: <current writer; active, awaiting successor, paused or finished>
-Planning review: <not dispatched / dispatched / complete / unavailable; ID, evidence and findings>
+Planning review: <not dispatched / dispatched / complete / unavailable; inspected package, ID, evidence and finding dispositions>
 
 ## Tasks
-- <stable ID and spec path>: <ready / implementing / blocked / delivered / pending checks>
+- <stable ID and spec path>: <ready / implementing / blocked / usable increment with pending checks / delivered>
   Baseline and dependencies: <references>
   Implementation sessions: <consumed/limit; actual identities and earlier attempts>
   Repairs: <rounds consumed/limit in each implementation session; results>
-  Review: <not dispatched / dispatched / complete / unavailable; inspected version, ID and evidence>
-  Checks: <final version, commands or actions, results and evidence>
+  Review: <not dispatched / dispatched / complete / unavailable; inspected version, ID, evidence and finding dispositions>
+  Checks: <acceptance IDs, final version, environment, commands or actions, results and evidence>
   Unfinished: <defects, missing checks, blockers and next recovery conditions>
 
 ## Continue
-Read: <only the documents and code needed next>
+Read: <only the documents and code needed next, and why each is needed>
 Next action: <concrete work to perform, not just “continue”>
 Avoid repeating: <completed work, dispatched calls and failed approaches>
 Transfer: <unique handoff reference, predecessor and known successor IDs, receipt location>
 ```
 
-Budget definitions and limits live in [recovery](../stages/recover.md). The handoff is the source for execution history; plans describe intended work and progress summarizes verified facts. A copy, renamed task or new session does not establish a fresh budget. Missing history stays unknown until reconciled with actual files and evidence.
+Budget definitions and limits live in [recovery](../stages/recover.md); acceptance and check validity live in [quality](quality.md). The handoff is the source for execution history; plans describe intended work and progress summarizes verified facts. A copy, renamed task or new session does not establish a fresh budget. Missing history stays unknown until reconciled with actual files and evidence.
 
 ## Transfer execution
 
@@ -89,4 +89,4 @@ If a create/start/review call times out or its response is lost, record the unce
 
 If the host proves a successor never started, the predecessor can record that fact, reclaim ownership and continue or retry. If it ran and stopped, reconcile its changes and counts before resuming or handing off again. Reviews use the same lookup rule; retrieve or resume the original review rather than dispatching another.
 
-On any resume, reconcile the handoff with real files, commits, check outputs and live sessions. Reuse existing results; verify changed content as needed. If an old writer may still run, resolve ownership first. A missing or contradictory record is a reason to investigate, not to reset history or mark work complete.
+On any resume, reconcile the handoff with real files, commits, check outputs and live sessions. Confirm the task's scope and Skill revision, and use [context](context.md) for changed instructions or stale references. Reuse valid results; run a relevant smoke check when workspace or environment drift makes them uncertain. If an old writer may still run, resolve ownership first. A missing or contradictory record is a reason to investigate, not to reset history or mark work complete.

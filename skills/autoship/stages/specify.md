@@ -1,7 +1,7 @@
 # Product, design and flow
 
-Turn the confirmed brief into a concise prd.md. For a frontend, write design.md from the selected visual reference: layout, typography, colors, spacing, component behavior and motion relevant to this product.
+Turn the confirmed brief into a concise prd.md or a product section in the existing plan. State the user outcome, scope, relevant exclusions and acceptance scenarios using [quality](../references/quality.md). Describe behavior before implementation details. Reuse existing requirements and mark proposed changes explicitly.
 
-Write app_flow.md describing the user's entry points, actions, state changes and recovery paths. Cover important empty, loading and error states. For a CLI, describe commands and their outcomes instead.
+For a frontend, maintain design.md and app_flow.md, or the project's established equivalents. The design carries the accepted reference and concrete layout, typography, color, spacing, component and motion decisions needed for this product. The flow describes entry points, actions, state changes, empty/loading/error states and recovery. Include accessibility and responsive behavior relevant to those flows. For a CLI or API, describe inputs, outputs, failures and compatibility in the product spec instead of creating visual documents.
 
-Check that requirements, design and flows agree. Reuse confirmed decisions; take new product tradeoffs back to the user while continuing independent work.
+Ready when every promised user journey has an observable result and the requirements, design and flows agree. Resolve material product tradeoffs with the user while continuing independent work, then return to the planning route.

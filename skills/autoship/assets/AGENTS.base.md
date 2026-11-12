@@ -1,6 +1,6 @@
 # Project conventions
 
-Maintain short pointers here to the project's requirements, design.md, app_flow.md, technical choices and tasks. Historical research candidates yield to confirmed decisions.
+Replace this paragraph with the project's real document pointers: requirements and acceptance, design and flows when applicable, technical decisions and the existing task/verification entry points. State when each pointer is needed. Historical research candidates yield to confirmed decisions.
 
 Prioritize user experience and proportionate implementation. Reuse mature projects and source where useful. Keep visual alignment and motion polished; use real rendering and screenshots to verify frontend changes.
 
@@ -10,6 +10,6 @@ Let layout, hierarchy, spacing and clear primary actions explain the interface. 
 
 When using Autoship, follow its implementation and handoff instructions for independent review, repair budgets and session ownership. Preserve their history across session changes; unavailable checks or review remain visibly pending.
 
-Record meaningful progress briefly with the project's timezone. Synchronize changed decisions and actual results; distinguish planned, implemented, verified and pending work.
+Record meaningful progress briefly with the project's timezone. Synchronize changed decisions and actual results; distinguish planned, implemented, verified and delivered work. Preserve a reusable lesson in its existing authoritative document only when evidence supports it.
 
-Keep work inside the agreed workspace and preserve existing user changes. Point to the active handoff outside the task worktree; record its location so a successor can continue. Push or publish only when explicitly requested.
+Keep work inside the agreed workspace and preserve existing user changes. Keep the active handoff outside the task worktree and provide its location to the user and successor through local context. Keep private absolute paths and raw logs out of shared project instructions. Push or publish only when explicitly requested.
