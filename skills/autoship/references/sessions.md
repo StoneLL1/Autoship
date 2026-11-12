@@ -48,7 +48,7 @@ Avoid repeating: <completed work, dispatched calls and failed approaches>
 Transfer: <unique handoff reference, predecessor and known successor IDs, receipt location>
 ```
 
-Budget definitions and limits live in [recovery](../stages/recover.md). The handoff is the source for execution history; plans describe intended work and progress summarizes verified facts. A copy, renamed task or new session does not establish a fresh budget. When importing an old runner's results, retain its task, review and failure history and check it against actual files; missing history stays unknown until reconciled.
+Budget definitions and limits live in [recovery](../stages/recover.md). The handoff is the source for execution history; plans describe intended work and progress summarizes verified facts. A copy, renamed task or new session does not establish a fresh budget. Missing history stays unknown until reconciled with actual files and evidence.
 
 ## Transfer execution
 

@@ -8,7 +8,7 @@
 
 把仓库中的整个 `skills/` 目录内容复制到宿主支持的 Skills 目录，保持 `autoship` 与 `autoship-docs-sync` 两个目录并列，保留其中的阶段材料和引用文件。具体安装位置以宿主当前配置为准。
 
-使用纯提示词版本时取 `main` 分支的内容；`v0.1.0` 标签保留旧运行器版本。更新本地仓库后，已复制到宿主目录的 Skills 也需要同步更新。
+从 `main` 分支获取 Skills。更新本地仓库后，已复制到宿主目录的 Skills 也需要同步更新。
 
 在目标项目中调用 `autoship`，或者直接让 Agent 读取本仓库的 [skills/autoship/SKILL.md](skills/autoship/SKILL.md)。不支持原生 Skills 的环境也可按文件路径读取；只粘贴入口正文会丢失阶段引用，需让 Agent 能访问完整目录。
 
@@ -61,12 +61,8 @@
 
 状态与失败证据保存在任务工作树之外；只对明确由 Autoship 创建的隔离工作树考虑回退，保留用户原有工作区。工作目录、成果位置及验证情况在交付时说明。
 
-## 从旧版迁移
+## 验证状态
 
-当前版本移除了 Node.js 运行器、CLI 适配器、`execution.json` 协议、npm 入口及模拟运行器测试。旧版的 `autoship new/resume` 等终端命令不再适用；安装过的全局旧命令不会因更新源码自动改变。
+两个 Skill 的格式校验、整目录隔离复制和引用检查已通过，已完成一轮独立审核并修复发现的问题。真实宿主的跨 session 闭环验收尚未完成。具体结果、待验项和验证方法见 [验收记录](docs/validation.md)。
 
-已有工作继续保留。把旧运行的报告、交接记录和工作树路径交给新 Skill，让 Agent 核对成果并转成新的交接记录；旧运行的审核与失败历史仍有效，不自动清零。运行记录中的指令需以当前用户授权和实际文件为准。
-
-两个 Skill 的格式校验、整目录隔离复制和引用检查已通过，已完成一轮独立审核并修复发现的问题。新版尚未完成真实宿主的跨 session 闭环验收；旧版 Codex CLI 的成功记录只证明旧运行器。具体结果、待验项和验证方法见 [验收记录](docs/validation.md)。
-
-产品边界见 [PROPOSAL.md](PROPOSAL.md)，贡献方式见 [CONTRIBUTING.md](CONTRIBUTING.md)，历史进展见 [progress.md](progress.md)。许可证：[MIT](LICENSE)。
+产品边界见 [PROPOSAL.md](PROPOSAL.md)，贡献方式见 [CONTRIBUTING.md](CONTRIBUTING.md)，开发进度见 [progress.md](progress.md)。许可证：[MIT](LICENSE)。

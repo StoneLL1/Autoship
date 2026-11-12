@@ -1,6 +1,6 @@
 # Autoship
 
-纯提示词的开发流程接力项目。使用现有 Agent 的能力与 Markdown Skills，不维护运行器、CLI 适配器或常驻服务。
+纯提示词的开发流程接力项目。使用现有 Agent 的能力与 Markdown Skills，阶段流程和接力约定都以提示词表达。
 
 ## 依据
 

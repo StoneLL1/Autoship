@@ -1,9 +1,7 @@
-node_modules/
 .autoship/
 *.tmp
 .DS_Store
 .playwright-cli/
-*.tgz
 .env
 .env.*
 !.env.example
