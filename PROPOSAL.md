@@ -45,5 +45,5 @@ Git 状态与失败证据应可追溯，自动回退仅限明确由 Autoship 创
 ## 资料
 
 - [设计决定](DESIGN.md)：本次取舍与保留的产品边界。
-- [验收场景](docs/validation.md)：提示词走查与真实宿主测试方法。
+- [验收记录](docs/validation.md)：当前验证结果、待验项，以及提示词走查与真实宿主测试方法。
 - [历史调研](research/opensource-workflows.md)、[轻量运行调研](research/lightweight-runtime.md)、[流程依据](research/workflow-evidence.md)：保留其调研时点，旧架构建议不作为当前实现要求。

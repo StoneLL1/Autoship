@@ -7,7 +7,7 @@
 - 产品决定与边界：[PROPOSAL.md](PROPOSAL.md)。
 - 使用入口和能力范围：[README.md](README.md)。
 - 会话创建、交接和接手：[skills/autoship/references/sessions.md](skills/autoship/references/sessions.md)。
-- 验证方法：[docs/validation.md](docs/validation.md)。
+- 验证结果、待验项与验证方法：[docs/validation.md](docs/validation.md)。
 - 开发过程与未完成项：[progress.md](progress.md)。
 
 ## 工作原则
