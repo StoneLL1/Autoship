@@ -1,6 +1,6 @@
 # 安装、更新与自检
 
-Autoship 分发两个必须并列的 Skill：`autoship` 和 `autoship-docs-sync`。无需 Autoship 运行时。目标 Agent 至少需要能读取文件和执行项目所需工具；完成规定的独立审核还需要独立 reviewer 能力。跨会话自动接力是另外一项宿主能力，以[验收记录](validation.md)为准。
+Autoship 分发两个必须并列的 Skill：`autoship` 和 `autoship-docs-sync`。无需 Autoship 运行时。目标 Agent 至少需要能读取文件和执行项目所需工具；完成规定的独立审核还需要独立 reviewer 能力。跨会话自动接力依赖宿主实际能力，真实闭环仍待实测，当前范围见 [验证状态](../README.md#验证状态)。
 
 ## 安装
 

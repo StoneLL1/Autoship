@@ -162,7 +162,7 @@ flowchart LR
 
 ## 验证状态
 
-文件校验、模拟情境走查与真实宿主执行分别记录。历史版本的通过不自动覆盖后续修改，当前详细结果以 [验收记录](docs/validation.md) 为准。
+文件校验、模拟情境走查与真实宿主执行分别记录。下表概述当前验证范围；历史版本的通过不自动覆盖后续修改。
 
 | 验证层级 | 当前记录 |
 | --- | --- |
@@ -176,11 +176,9 @@ flowchart LR
 | --- | --- |
 | 安装、自检、更新与故障定位 | [安装指南](docs/installation.md) |
 | 任务、验收与异常处理示例 | [使用示例](docs/examples.md) |
-| 产品定位与能力边界 | [产品方案](PROPOSAL.md) · [设计决定](DESIGN.md) |
 | 接力、验收与失败恢复 | [会话接力](skills/autoship/references/sessions.md) · [验收与证据](skills/autoship/references/quality.md) · [恢复规则](skills/autoship/stages/recover.md) |
-| 已验证范围与剩余待验项 | [验收记录](docs/validation.md) |
-| 参考来源、采用方式与取舍 | [研究记录](docs/research.md) |
-| 版本变化与开发进度 | [CHANGELOG](CHANGELOG.md) · [开发进度](progress.md) |
+| 当前能力与验证范围 | [自动接力](#自动接力如何工作) · [验证状态](#验证状态) |
+| 版本变化 | [CHANGELOG](CHANGELOG.md) |
 
 ## 参与贡献
 
@@ -188,7 +186,7 @@ flowchart LR
 
 ## 致谢
 
-流程方法参考 Wiki 知识库、Trellis、Superpowers 与 OpenSpec，采用边界见 [研究记录](docs/research.md)。README 的结构与排版参考 [Awesome README](https://github.com/matiassingers/awesome-readme) 和 [Best README Template](https://github.com/othneildrew/Best-README-Template)。
+流程方法参考 Wiki 知识库、Trellis、Superpowers 与 OpenSpec。README 的结构与排版参考 [Awesome README](https://github.com/matiassingers/awesome-readme) 和 [Best README Template](https://github.com/othneildrew/Best-README-Template)。
 
 ## 许可证
 

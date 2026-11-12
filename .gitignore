@@ -5,3 +5,12 @@
 .env
 .env.*
 !.env.example
+
+# Local development notes; public usage guides stay tracked.
+/AGENTS.md
+/PROPOSAL.md
+/DESIGN.md
+/progress.md
+/docs/research.md
+/docs/validation.md
+/docs/visualizer-design.md

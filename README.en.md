@@ -166,7 +166,7 @@ Prompts cannot add host tools or wake themselves after the host has fully exited
 
 ## Validation status
 
-File checks, simulated walkthroughs, and real-host execution are recorded separately. Earlier results do not automatically validate later edits. The [validation record](docs/validation.md) is the source of truth for detailed results.
+File checks, simulated walkthroughs, and real-host execution are recorded separately. The table below summarizes the current validation scope; earlier results do not automatically validate later edits.
 
 | Validation layer | Current record |
 | --- | --- |
@@ -182,11 +182,9 @@ Repository guides are currently in Chinese. The skill files and workflow referen
 | --- | --- |
 | Installation, integrity checks, updates, and troubleshooting | [Installation guide](docs/installation.md) |
 | Task, acceptance, and exception examples | [Examples](docs/examples.md) |
-| Product scope and capability boundaries | [Proposal](PROPOSAL.md) · [Design decisions](DESIGN.md) |
 | Handoff, acceptance, and recovery | [Sessions](skills/autoship/references/sessions.md) · [Quality](skills/autoship/references/quality.md) · [Recovery](skills/autoship/stages/recover.md) |
-| Verified scope and remaining checks | [Validation record](docs/validation.md) |
-| Sources, adopted methods, and tradeoffs | [Research notes](docs/research.md) |
-| Changes and development progress | [Changelog](CHANGELOG.md) · [Progress](progress.md) |
+| Current capabilities and validation scope | [Session handoff](#how-session-handoff-works) · [Validation status](#validation-status) |
+| Version changes | [Changelog](CHANGELOG.md) |
 
 ## Contributing
 
@@ -194,7 +192,7 @@ Contributions can include concrete failure scenarios, prompt improvements, and r
 
 ## Acknowledgments
 
-Workflow methods draw on the Wiki knowledge base, Trellis, Superpowers, and OpenSpec; see [research notes](docs/research.md) for adoption boundaries. README structure and presentation draw on [Awesome README](https://github.com/matiassingers/awesome-readme) and [Best README Template](https://github.com/othneildrew/Best-README-Template).
+Workflow methods draw on the Wiki knowledge base, Trellis, Superpowers, and OpenSpec. README structure and presentation draw on [Awesome README](https://github.com/matiassingers/awesome-readme) and [Best README Template](https://github.com/othneildrew/Best-README-Template).
 
 ## License
 
