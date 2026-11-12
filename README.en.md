@@ -32,7 +32,7 @@ Autoship is a set of prompt-only development skills for **new projects, feature 
 ## Why Autoship
 
 - **Continuous progress** — The agent organizes investigation, planning, implementation, and repair within the confirmed scope. Small projects may need only 1–2 tasks.
-- **Context handoff** — Save context and start a successor through host tools. Provide a manual handoff when a new session is necessary and tools are insufficient.
+- **Separate sessions** — New projects use a fresh independent session for each planning document, then another for development after planning review and finding resolution. Explain missing capabilities and provide manual handoff.
 - **Verifiable delivery** — Acceptance, independent review, and repair evidence determine completion. Task history and remaining work persist.
 - **Lightweight setup** — Two Markdown skills reuse your existing tools and authentication. No Autoship runtime is required.
 
@@ -73,8 +73,10 @@ Invoke `autoship` in your target project. For example:
 ```text
 Use autoship to build a local Markdown reader in <absolute project path>.
 Help me clarify the requirements, then proceed to a locally usable result once confirmed.
-You may use the host's tools to create sessions and hand off as needed;
-you do not need to wait for me to say “continue” each time.
+You may use the host's tools to create a separate independent session for each
+planning document, then a fresh development session after planning review passes.
+Do not wait for me to say “continue” each time. If host capabilities are insufficient,
+explain the limitation and give me a ready-to-send manual handoff prompt.
 ```
 
 If your host cannot invoke skills natively, ask the agent to read the absolute path to the [entry file](skills/autoship/SKILL.md), with both complete directories accessible. Pasting only the entry text loses its referenced files.
@@ -126,7 +128,9 @@ flowchart LR
     linkStyle default stroke:#9b9a97
 ```
 
-These are logical stages. Task count and session boundaries depend on the work. A short plan can combine requirements, technical decisions, and task specs. Frontend work keeps explicit design and user-flow references and checks the real rendering.
+New projects create separate sessions in order for the PRD, design, user flows, technical choices, project conventions, implementation plan, and task specs. Non-frontend projects skip visual design/flow documents; verified existing material can be reused. Once the complete package has one independent review and valid findings are resolved, create a fresh development session. See the [new-project route](skills/autoship/stages/plan-new.md) for completion criteria.
+
+Documents can stay brief and small projects may need only 1–2 implementation tasks. Existing projects update affected material; a new plan still enters development in a fresh session, while active implementation and repairs retain their records. An explicit user request can combine sessions while preserving the planning review gate.
 
 <details>
 <summary><strong>Work and completion criteria by scenario</strong></summary>
@@ -148,12 +152,12 @@ Tasks carry purposeful context references and concrete acceptance criteria. Star
 <p align="center"><sub>Concept illustration: save context → transfer write ownership → resume. This is not a real-host screenshot.</sub></p>
 
 1. **Check capabilities** — The agent reads project conventions and identifies the current task and available session, query, and review tools.
-2. **Save and release ownership** — When fresh context is needed, save a handoff snapshot, record that takeover is pending, and stop changing the workspace and shared record before creating and starting a successor.
+2. **Save and release ownership** — At a required document or development session boundary, save a handoff snapshot, record that takeover is pending, and stop changing the workspace and shared record before creating and starting a successor.
 3. **Verify and take over** — The successor reads the record, checks the directory and existing results, and registers takeover before writing. The original session checks the takeover result and remains read-only.
 
-- **Independent execution sessions**: When the host can create, start, query, and access project files, create a session as needed, confirm takeover, and continue.
-- **Subagents only**: Independent review or delegated execution is possible. Successor suitability depends on context, file access, and lifetime; it does not imply a new visible chat.
-- **Current session only**: Continue useful work first. When fresh context is necessary, leave a ready-to-send handoff prompt for the user to open the next session.
+- **Independent execution sessions**: With authorization and tools to create, start, query, and access project files, create a session at each required boundary, confirm takeover, and continue.
+- **Subagents only**: Use them for independent review and provide manual handoff at required boundaries by default. Substitute child execution only when the user explicitly accepts it and its capabilities are verified; disclose that it is not a new visible chat.
+- **Missing session capability or authorization**: Explain what is missing, save and stop writing at the required boundary, and provide a filled handoff prompt with absolute paths for the user to open the next session. Do not silently perform that next stage in the current session.
 
 Prompts cannot add host tools or wake themselves after the host has fully exited. See [session handoff](skills/autoship/references/sessions.md) for the full contract and reusable prompts.
 
@@ -171,7 +175,7 @@ File checks, simulated walkthroughs, and real-host execution are recorded separa
 | Validation layer | Current record |
 | --- | --- |
 | Files and distribution | Skill format, local links, isolated copies, and installation-command checks are recorded. |
-| Workflow walkthroughs | One independent review and its fixes, plus 20 explicitly labeled static simulations, are recorded. |
+| Workflow walkthroughs | Earlier versions record 20 static scenarios. This separate-session change has one independent review and 13 static scenarios; neither substitutes for real-host execution. |
 | Real-host handoff | **Still untested**: there is no end-to-end evidence of a successor continuing after the original session ends and completing delivery. |
 
 ## Documentation

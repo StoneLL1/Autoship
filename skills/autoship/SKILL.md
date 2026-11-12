@@ -7,7 +7,7 @@ If assigned an independent review, load only [code review](stages/review-code.md
 
 Otherwise, read the project's AGENTS.md, relevant progress and any supplied handoff using [task context](references/context.md). Adopt already confirmed requirements and existing authorization. Clarify only unresolved product decisions; after confirmation, keep working without asking for routine permission to continue. Respond and write project-facing documents in the user's language unless the project has an established convention.
 
-Use [sessions](references/sessions.md) when starting or resuming the workflow and before handing off. Discover the host's actual capabilities, keep a durable handoff outside the task worktree, and use available, authorized tools to create and start a successor when a fresh context helps. Continue in the current session while it remains useful. Autoship supplies instructions, not a runtime; do not build a scheduler or background loop to execute them.
+Use [sessions](references/sessions.md) at workflow entry, on resume and at every session boundary. Discover actual host capabilities and keep a durable handoff outside the task worktree. For new projects, follow [the document-by-document session route](stages/plan-new.md); after planning review and finding resolution, start a fresh development session. At a required boundary, unavailable or unauthorized session tools require an explicit explanation and a ready-to-send manual handoff. Autoship supplies instructions, not a runtime; do not build a scheduler or background loop to execute them.
 
 Load only the current stage:
 
@@ -19,7 +19,7 @@ Load only the current stage:
 - Delivery: [finish](stages/finish.md).
 - Obstacles and deferred checks: [recover](stages/recover.md), [verify](stages/verify.md).
 
-Choose the fewest useful tasks for the difficulty and uncertainty; small projects may need only one or two. A short plan can contain the brief, decisions and task specs together; retain explicit design and flow references for frontend work. Related tasks and planning phases can share a session. Preserve each task's identity, acceptance, review and recovery history across session changes or replanning.
+Choose the fewest useful implementation tasks for the difficulty and uncertainty; small projects may need only one or two. Task count does not remove required planning or development session boundaries. Existing-project changes may use a short combined plan; new projects use the planning route's separate document sessions. Preserve each task's identity, acceptance, review and recovery history across session changes or replanning.
 
 Within confirmed scope, choose implementation details and adjust the plan autonomously. Synchronize changed decisions and results with [autoship-docs-sync](../autoship-docs-sync/SKILL.md), in the current session when convenient.
 

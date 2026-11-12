@@ -6,4 +6,4 @@ Match the plan's size to the work. Simple work may need only one or two implemen
 
 Explain the sequence and important tradeoffs. For coupled changes, name the producer, consumer and agreed interface or data contract so separate tasks can join correctly. Leave routine code structure and implementation choices to the implementing agent.
 
-Ready when every confirmed outcome maps to a task and check, dependencies have a usable order, and the main user flow has end-to-end acceptance. Continue to [task specs](split-tasks.md).
+Ready when every confirmed outcome maps to a planned increment and check, dependencies have a usable order, and the main user flow has end-to-end acceptance. For a new project, return to [the planning route](plan-new.md) to hand off to the task-spec session. Other routes continue to [task specs](split-tasks.md).

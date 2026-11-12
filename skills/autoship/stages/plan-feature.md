@@ -6,4 +6,4 @@ Describe the behavior delta: what is added, changed or removed, what remains com
 
 Write the [implementation plan](plan-implementation.md) and [tasks](split-tasks.md), including regression and integration acceptance. Use [planning review](review-plan.md) for one independent review of the complete package, then resolve findings with [plan repair](plan-repair.md).
 
-Ready when the reviewed change is covered by executable tasks and its affected contracts and checks are identified. Continue to [implementation](implement.md). Reuse the project's document structure and task system throughout.
+Ready when the reviewed change is covered by executable tasks and its affected contracts and checks are identified. Record the passed planning gate, then use [sessions](../references/sessions.md) to hand off to fresh [development](implement.md). Reuse the project's document structure and task system throughout.

@@ -1,5 +1,7 @@
 # Implement and deliver a task
 
+Before starting development from planning, verify the planning gate and the required fresh-session takeover in [sessions](../references/sessions.md). If still in the planning session, dispatch the development successor or provide manual handoff before writing implementation code, unless an explicit user override combines sessions. A resume of active implementation or repair inherits the existing gate and history.
+
 Read AGENTS.md, the task spec and its [implementation context](../references/context.md), relevant evidence and the active handoff. Confirm that planning review is resolved and dependencies are satisfied. Check actual workspace state, then establish the baseline only for a task that has not started; otherwise preserve its original baseline. Record the current implementation context once, reusing an existing session entry on resume, using [sessions](../references/sessions.md). Resume an interrupted attempt rather than restarting completed work.
 
 Implement the promised behavior with existing patterns. Use [acceptance and evidence](../references/quality.md) to select and record checks; for a frontend, read design.md and app_flow.md or their equivalents and inspect actual rendering. If implementation reveals a mistaken assumption, update affected decisions and coverage before continuing; take material scope changes to the user. Investigate obstacles and compatible alternatives; use [recovery](recover.md) for blocked work or exhausted attempts.

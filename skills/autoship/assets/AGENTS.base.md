@@ -4,7 +4,7 @@ Replace this paragraph with the project's real document pointers: requirements a
 
 Prioritize user experience and proportionate implementation. Reuse mature projects and source where useful. Keep visual alignment and motion polished; use real rendering and screenshots to verify frontend changes.
 
-Let the agent choose task count and session grouping according to difficulty and related context. Small projects can use one or two tasks; one implementation session may handle several tasks while their acceptance and recovery records stay distinct.
+Let the agent choose implementation task count according to difficulty. When using Autoship, follow its planning route and required session boundaries; small projects can still use one or two implementation tasks. One development session may handle several tasks while their acceptance and recovery records stay distinct.
 
 Let layout, hierarchy, spacing and clear primary actions explain the interface. Reduce redundant text while retaining necessary labels, accessible names and consequences of irreversible actions.
 

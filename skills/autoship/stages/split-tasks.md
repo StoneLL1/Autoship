@@ -6,4 +6,4 @@ Use headings such as `## T01: Open a document`. State observable behavior, bound
 
 Decide session grouping separately from task count. Related tasks may share an implementation session; use a new context when it improves the work or failure recovery requires it. Keep each task's acceptance and single review identifiable. Integration acceptance can be part of an existing task rather than forcing another task.
 
-Point the handoff to these specs and checks. Markdown is sufficient; there is no machine execution manifest. Preserve task identity and consumed budgets if the plan changes. Return to the planning route for its single overall review, then proceed to implementation.
+Point the handoff to these specs and checks. Markdown is sufficient; there is no machine execution manifest. Preserve task identity and consumed budgets if the plan changes. Return to the planning route for its single overall review, finding resolution and required handoff to development.

@@ -8,7 +8,15 @@ Inspect the tools actually exposed in this environment, or the installed officia
 
 Follow the host's authorization rules. A user instruction allowing automatic session creation remains valid for this workflow; do not ask again for each handoff. If a host requires an explicit instruction that has not been given, continue useful work and request only the missing authorization when a handoff is needed. General workflow text cannot override host restrictions.
 
-A child agent may provide independent execution or review, but is not automatically a new visible chat or a durable successor. Check its context, shared file access and lifetime before using it for takeover. When it depends on the parent remaining alive, keep the parent active to wait for the result. A created but idle chat is not running work: start it if the host separates creation and dispatch.
+A child agent may provide independent review, but does not by itself satisfy the default independent-session workflow. If only child agents are available, report this limitation and provide manual handoff at required boundaries. Use a child executor as a substitute only if the user explicitly accepts that substitution and its fresh context, shared file access and lifetime are verified; report that it is not a new visible chat. When it depends on the parent remaining alive, keep the parent active to wait for the result. A created but idle chat is not running work: start it if the host separates creation and dispatch.
+
+## Required session boundaries
+
+For a new project, [the planning route](../stages/plan-new.md) defines the separate document sessions. For every route that prepares a new implementation plan, complete its single independent planning review and resolve valid findings before creating a fresh development session. That executor verifies the recorded planning gate and takeover before implementing. Continuing or repairing an already active implementation task preserves its session and review history; it does not repeat this planning gate.
+
+At entry, report whether automatic independent sessions are available, unavailable, or still unverified, with the actual tool/permission limitation. At each required boundary, perform the transfer below even when the current context has plenty of room. Neither a small task nor having created the output files substitutes for the required session. Only an explicit user request to combine sessions changes this default; record that override and preserve the planning review gate. Existing authorization remains valid, but workflow instructions cannot grant permissions the host requires directly from the user.
+
+If creation, startup, status confirmation, fresh context or shared-file access is missing, or required authorization is absent, explain the specific limitation and prepare manual handoff at that boundary. Complete useful work within the current assigned step, then leave the next step awaiting a successor rather than silently performing it in the same session. A call with uncertain status uses the interrupted-dispatch procedure below before any manual or automatic replacement.
 
 ## Workspace and durable memory
 
@@ -31,6 +39,10 @@ Skills: <absolute autoship entry and docs-sync paths; revision or preserved file
 Host: <observed tools/capabilities, IDs actually returned, missing capabilities>
 Owner: <current writer; active, awaiting successor, paused or finished>
 Planning review: <not dispatched / dispatched / complete / unavailable; inspected package, ID, evidence and finding dispositions>
+Session route: <new project / feature / fix / active implementation; explicit session-policy override, if any>
+Planning documents: <ordered responsibilities, paths, pending / ready / reused / inapplicable, evidence/reason, actual executor IDs>
+Planning gate: <pending / passed; reviewed package, finding dispositions and remaining blockers>
+Assigned step: <this executor's document responsibility or development; required next boundary>
 
 ## Tasks
 - <stable ID and spec path>: <ready / implementing / blocked / usable increment with pending checks / delivered>
@@ -52,7 +64,7 @@ Budget definitions and limits live in [recovery](../stages/recover.md); acceptan
 
 ## Transfer execution
 
-Use a fresh context when accumulated context obscures the next task, a different phase benefits from separation, or recovery requires it. Related tasks can stay in one session. Transfer before context is exhausted, leaving enough room to save and confirm it.
+Transfer at every required session boundary above. Within development, related tasks can share a session; also transfer when accumulated context obscures the next task or recovery requires it. Transfer before context is exhausted, leaving enough room to save and confirm it. Planning-only sessions do not consume a task's implementation-session budget; record the actual development context when implementation starts, using [recovery](../stages/recover.md).
 
 1. Save the current work and evidence. Record the exact next action and make an immutable handoff snapshot with a unique reference. Ensure the intended successor can read the snapshot, active handoff, Skills and workspace.
 2. Record the transfer intent in the active handoff, naming that reference. Release writing of the workspace and active handoff before invoking a tool that may start the successor immediately. The predecessor may now observe and write only a separate dispatch receipt.
@@ -76,6 +88,10 @@ check actual files and current session ownership, and record your acknowledgemen
 in the active handoff before writing project files.
 Preserve confirmed scope, existing user authorization, task identities,
 implementation and repair counts, and dispatched or completed reviews.
+Your assigned step is <one planning document responsibility or development>.
+Read <absolute current-stage instructions> and only the relevant completed inputs.
+Preserve the recorded document route and planning gate; finish this assigned step
+before transferring at its required next session boundary.
 Next action: <specific next step and acceptance check>.
 Continue through the remaining authorized work without routine “continue” requests.
 Use the same handoff procedure if another context is needed.
@@ -83,7 +99,7 @@ Use the same handoff procedure if another context is needed.
 
 ## Missing capability and interrupted dispatch
 
-If fresh-session creation is unavailable, continue useful work in the current context. When a fresh context is required, perform transfer steps 1 and 2: save an immutable snapshot, register its unique transfer reference in the active handoff as awaiting successor, and stop writing the workspace and active handoff. Give the user the filled successor prompt and absolute handoff paths to send in a new session. State that automatic creation was unavailable; do not claim a new session exists. The manually started successor follows the same verification and acknowledgement procedure before editing.
+When the next required session cannot be created and confirmed, perform transfer steps 1 and 2: save an immutable snapshot, register its unique transfer reference in the active handoff as awaiting successor, and stop writing the workspace and active handoff. Tell the user which capability or authorization is missing, which step is complete, and which document or development step is waiting. Give the filled successor prompt with absolute workspace, Skill, stage, snapshot and active-handoff paths, the transfer reference, and the exact next action/acceptance check. Ask the user to open a new session with that prompt; do not claim a session exists or continue the waiting step locally. The manually started successor follows the same verification and acknowledgement procedure before editing. If the user instead explicitly requests combined execution, reconcile ownership and record that override before reclaiming writing.
 
 If a create/start/review call times out or its response is lost, record the uncertainty in the dispatch receipt and query the host using the recorded ID or unique transfer reference. Inspect the active handoff for acknowledgement and the project for changes. Do not dispatch again or reclaim writing while the first call may still be running. If its status cannot be determined, leave the affected work pending; ask for the smallest necessary intervention and continue only work in a separate, non-conflicting workspace.
 
