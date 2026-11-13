@@ -22,6 +22,8 @@ In the existing task spec or handoff, list the few paths needed next and why eac
 
 Use repository-relative paths for project documents and absolute paths for external evidence, installed Skills and workspaces. Pin external sources to a revision or retrieval date. Check that the intended reader can access the material; a local temporary download is not automatically available in another host. Preserve the necessary decision and a source pointer in durable context when the download will not travel.
 
+For a new project's clarification-to-PRD handoff, use the full [discovery package](discovery.md). The relevant input is the complete requirements interview and its research, not just a small task brief. Retain detail in durable files and give the successor a reading manifest; a short launch prompt must not reduce the underlying context. Later coding tasks include the applicable implementation-research and reuse pointers from technical planning.
+
 When updating a running workflow, record which Skill revision or file snapshot was used. Reconcile changed rules on resume while retaining existing task IDs, authorization, review dispatches and consumed budgets. Installing a newer Skill does not start a new task.
 
 ## Keep useful knowledge

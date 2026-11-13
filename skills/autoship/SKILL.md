@@ -5,6 +5,8 @@ description: Use when asked to run Autoship for a new project, feature or bug fi
 
 If assigned an independent review, load only [code review](stages/review-code.md) or [planning review](stages/review-plan.md) and the supplied review context. Stay read-only; the coordinator owns execution and the handoff.
 
+If assigned product or implementation research, follow only the assigned role in [new-project research](stages/research-new.md), its source-quality instructions and supplied discovery context. Return findings to the coordinator without taking execution ownership, dispatching other researchers or entering the planning route.
+
 Otherwise, read the project's AGENTS.md, relevant progress and any supplied handoff using [task context](references/context.md). Adopt already confirmed requirements and existing authorization. Clarify only unresolved product decisions; after confirmation, keep working without asking for routine permission to continue. Respond and write project-facing documents in the user's language unless the project has an established convention.
 
 Use [sessions](references/sessions.md) at workflow entry, on resume and at every session boundary. Discover actual host capabilities and keep a durable handoff outside the task worktree. For new projects, follow [the document-by-document session route](stages/plan-new.md); after planning review and finding resolution, start a fresh development session. At a required boundary, unavailable or unauthorized session tools require an explicit explanation and a ready-to-send manual handoff. Autoship supplies instructions, not a runtime; do not build a scheduler or background loop to execute them.

@@ -8,7 +8,7 @@ Inspect the tools actually exposed in this environment, or the installed officia
 
 Follow the host's authorization rules. A user instruction allowing automatic session creation remains valid for this workflow; do not ask again for each handoff. If a host requires an explicit instruction that has not been given, continue useful work and request only the missing authorization when a handoff is needed. General workflow text cannot override host restrictions.
 
-A child agent may provide independent review, but does not by itself satisfy the default independent-session workflow. If only child agents are available, report this limitation and provide manual handoff at required boundaries. Use a child executor as a substitute only if the user explicitly accepts that substitution and its fresh context, shared file access and lifetime are verified; report that it is not a new visible chat. When it depends on the parent remaining alive, keep the parent active to wait for the result. A created but idle chat is not running work: start it if the host separates creation and dispatch.
+A child agent may provide research or independent review, but does not by itself satisfy the default independent-session workflow. If only child agents are available, report this limitation and provide manual handoff at required boundaries. Use a child executor as a substitute only if the user explicitly accepts that substitution and its fresh context, shared file access and lifetime are verified; report that it is not a new visible chat. When it depends on the parent remaining alive, keep the parent active to wait for the result. A created but idle chat is not running work: start it if the host separates creation and dispatch.
 
 ## Required session boundaries
 
@@ -43,6 +43,7 @@ Session route: <new project / feature / fix / active implementation; explicit se
 Planning documents: <ordered responsibilities, paths, pending / ready / reused / inapplicable, evidence/reason, actual executor IDs>
 Planning gate: <pending / passed; reviewed package, finding dispositions and remaining blockers>
 Assigned step: <this executor's document responsibility or development; required next boundary>
+Discovery: <absolute full record/Q&A paths, revision, decision checklist, research reports and design selection; see discovery.md>
 
 ## Tasks
 - <stable ID and spec path>: <ready / implementing / blocked / usable increment with pending checks / delivered>
@@ -66,7 +67,7 @@ Budget definitions and limits live in [recovery](../stages/recover.md); acceptan
 
 Transfer at every required session boundary above. Within development, related tasks can share a session; also transfer when accumulated context obscures the next task or recovery requires it. Transfer before context is exhausted, leaving enough room to save and confirm it. Planning-only sessions do not consume a task's implementation-session budget; record the actual development context when implementation starts, using [recovery](../stages/recover.md).
 
-1. Save the current work and evidence. Record the exact next action and make an immutable handoff snapshot with a unique reference. Ensure the intended successor can read the snapshot, active handoff, Skills and workspace.
+1. Save the current work and evidence. Record the exact next action and make an immutable handoff snapshot with a unique reference. For a new project's clarification-to-PRD transfer, include the complete [discovery reading manifest](discovery.md), not just the brief. Ensure the intended successor can read the snapshot, active handoff, required attachments, Skills and workspace.
 2. Record the transfer intent in the active handoff, naming that reference. Release writing of the workspace and active handoff before invoking a tool that may start the successor immediately. The predecessor may now observe and write only a separate dispatch receipt.
 3. Invoke the available authorized session tool with the execution directory and the prompt below. Record the real returned ID in that separate receipt. Use query/wait capabilities to establish whether the successor is running and has acknowledged takeover; do not equate an accepted request with completed handoff.
 4. The successor reads the snapshot and active record, verifies that this reference is still awaiting its takeover, checks actual files and Git, then records its own identity and acknowledgement in the active handoff before editing. It inherits the existing task budgets and review state, and performs the next action. It does not redo completed phases.
@@ -90,6 +91,10 @@ Preserve confirmed scope, existing user authorization, task identities,
 implementation and repair counts, and dispatched or completed reviews.
 Your assigned step is <one planning document responsibility or development>.
 Read <absolute current-stage instructions> and only the relevant completed inputs.
+Required input manifest: <absolute paths and reading purposes>.
+For a new-project PRD, read the full discovery record and Q&A, both research reports,
+supplied requirements and design selection before drafting. Preserve their detail
+and check the PRD against the recorded decision checklist.
 Preserve the recorded document route and planning gate; finish this assigned step
 before transferring at its required next session boundary.
 Next action: <specific next step and acceptance check>.

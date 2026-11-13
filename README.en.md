@@ -128,9 +128,11 @@ flowchart LR
     linkStyle default stroke:#9b9a97
 ```
 
-New projects create separate sessions in order for the PRD, design, user flows, technical choices, project conventions, implementation plan, and task specs. Non-frontend projects skip visual design/flow documents; verified existing material can be reused. Once the complete package has one independent review and valid findings are resolved, create a fresh development session. See the [new-project route](skills/autoship/stages/plan-new.md) for completion criteria.
+New projects start with a grill-me-style interview that follows decision dependencies through multiple rounds. Two subagents then research comparable products and implementation/open-source reuse respectively. For a frontend, clarification ends with the user's design-style choice. The full Q&A, decision rationale, both reports and design selection travel to the PRD session through the [discovery context](skills/autoship/references/discovery.md).
 
-Documents can stay brief and small projects may need only 1–2 implementation tasks. Existing projects update affected material; a new plan still enters development in a fresh session, while active implementation and repairs retain their records. An explicit user request can combine sessions while preserving the planning review gate.
+Then create separate sessions in order for the PRD, design, user flows, technical choices, project conventions, implementation plan, and task specs. Non-frontend projects skip visual design/flow documents; verified existing material can be reused. Once the complete package has one independent review and valid findings are resolved, create a fresh development session. See the [new-project route](skills/autoship/stages/plan-new.md) for completion criteria.
+
+PRD length follows requirement coverage, including user stories, behavior rules, boundaries and acceptance. Small projects may still need only 1–2 implementation tasks. Existing projects update affected material; a new plan still enters development in a fresh session, while active implementation and repairs retain their records. An explicit user request can combine sessions while preserving the planning review gate.
 
 <details>
 <summary><strong>Work and completion criteria by scenario</strong></summary>
@@ -156,7 +158,7 @@ Tasks carry purposeful context references and concrete acceptance criteria. Star
 3. **Verify and take over** — The successor reads the record, checks the directory and existing results, and registers takeover before writing. The original session checks the takeover result and remains read-only.
 
 - **Independent execution sessions**: With authorization and tools to create, start, query, and access project files, create a session at each required boundary, confirm takeover, and continue.
-- **Subagents only**: Use them for independent review and provide manual handoff at required boundaries by default. Substitute child execution only when the user explicitly accepts it and its capabilities are verified; disclose that it is not a new visible chat.
+- **Subagents only**: Use them for research and independent review, and provide manual handoff at required boundaries by default. Substitute child execution only when the user explicitly accepts it and its capabilities are verified; disclose that it is not a new visible chat.
 - **Missing session capability or authorization**: Explain what is missing, save and stop writing at the required boundary, and provide a filled handoff prompt with absolute paths for the user to open the next session. Do not silently perform that next stage in the current session.
 
 Prompts cannot add host tools or wake themselves after the host has fully exited. See [session handoff](skills/autoship/references/sessions.md) for the full contract and reusable prompts.
@@ -175,7 +177,7 @@ File checks, simulated walkthroughs, and real-host execution are recorded separa
 | Validation layer | Current record |
 | --- | --- |
 | Files and distribution | Skill format, local links, isolated copies, and installation-command checks are recorded. |
-| Workflow walkthroughs | Earlier versions record 20 static scenarios. This separate-session change has one independent review and 13 static scenarios; neither substitutes for real-host execution. |
+| Workflow walkthroughs | Historical records are retained. The latest Clarify/PRD change has one independent review, finding resolution and 22 static scenarios; these do not substitute for real-host execution. |
 | Real-host handoff | **Still untested**: there is no end-to-end evidence of a successor continuing after the original session ends and completing delivery. |
 
 ## Documentation
